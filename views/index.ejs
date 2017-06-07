@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class=search-page>
+        <center>
+            <h1> Best Car Roulette </h1>
+            <h4> O lugar para você encontrar os veículos que mais combinam com você! </h4>
+            <form action="/search" method="get">
+                <select id="model" name="model">
+                    <option value="GOL">GOL</option>
+                    <option value="UNO">UNO</option>
+                    <option value="FIESTA">FIESTA</option>
+                    <option value="PRISMA">PRISMA</option>
+                </select>
+                <select id="year" name="year">
+                    <option value="2003">2003</option>
+                    <option value="2004">2004</option>
+                    <option value="2005">2005</option>
+                    <option value="2006">2006</option>
+                    <option value="2007">2007</option>
+                    <option value="2008">2008</option>
+                    <option value="2009">2009</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                </select>
+                <select id="state" class="select-state" name="state">
+                    <option value="AC">ACRE</option>
+                    <option value="AL">ALAGOAS</option>
+                    <option value="AP">AMAPÁ</option>
+                    <option value="BA">BAHIA</option>
+                    <option value="CE">CEARA</option>
+                    <option value="DF">DISTRITO FEDERAL</option>
+                    <option value="ES">ESPIRITO SANTO</option>
+                    <option value="GO">GOIAS</option>
+                    <option value="MA">MARANHÃO</option>
+                    <option value="MT">MATO GROSSO</option>
+                    <option value="MS">MATO GROSSO DO SUL</option>
+                    <option value="MG">MINAS GERAIS</option>
+                    <option value="PA">PARA</option>
+                    <option value="PB">PARAIBA</option>
+                    <option value="PR">PARANÁ</option>
+                    <option value="PE">PERNAMBUCO</option>
+                    <option value="PI">PIAUI</option>
+                    <option value="RJ">RIO DE JANEIRO</option>
+                    <option value="RN">RIO GRANDE DO NORTE</option>
+                    <option value="RS">RIO GRANDE DO SUL</option>
+                    <option value="RO">RONDONIA</option>
+                    <option value="RR">RORAIMA</option>
+                    <option value="SC">SANTA CATARINA</option>
+                    <option value="SP">SÃO PAULO</option>
+                    <option value="SE">SERGIPE</option>
+                    <option value="TO">TOCANTINS</option>
+                </select>
+                <input class="data-input" type="text" placeholder="Se desejar, entre com detalhes do veículo" name="query" />
+                <input class="btn-input" type="submit" value="Pesquisar" />
+            </form>
+            <%
+                if(results){
+                    if(list.length > 0){
+            %>
+            <b>Resultados da pesquisa por <%= search %>:</b>
+            <ul>
+                <% list.forEach(function(item){ %>
+                <li>
+                    <a href="<%= item.url %>"><%= item.model.split(' ')[0] %></a>
+                    <%= item.model.split(' ')[1] %>
+                    (<%= item.year%>)
+                    (<%= item.price%>)
+                </li>
+                <% }); %>
+            </ul>
+            <% } else{ %>
+                <b>Nenhum resultado encontrado para <%= search %>!</b>
+            <% 
+                }
+            }
+            %>
+        </center>
+    </div>
+</body>
+</html>

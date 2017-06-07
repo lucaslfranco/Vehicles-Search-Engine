@@ -1,0 +1,81 @@
+body {
+  background-color: #bbf;
+  color: #333;
+  width: 100%;
+  margin: 0;
+  font: 20px "Ubuntu", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+.search-page {
+  background-image: url('https://source.unsplash.com/category/nature/1600x900/');
+  background-repeat: no-repeat;
+  background-size:100%;
+  color: black;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  padding: 3em;
+  position: absolute;
+  text-align: center;
+  background-size: cover;
+}
+form {
+  width : 500px;
+  height: 200px;
+}
+
+select {
+  margin: 0.5rem;
+  padding: 0 0.5rem;
+  width: 25%;
+  height: 2.5rem;
+  border-radius: 0.4rem;
+}
+
+.select-state {
+  width: 30%;
+}
+
+.data-input {
+  margin: 1rem;
+  padding: 0 0.5rem;
+  width: 90%;
+  height: 2.5rem;
+  border-radius: 0.6rem; 
+}
+
+.btn-input {
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+  font: 20px 'Ubuntu';
+  font-weight: 400;
+}
+
+ul {
+  width: 50%;
+  padding: 0.1rem;
+  background-color: #eef;
+  box-shadow: 0 0 1rem #888;
+}
+
+li {
+  padding: 0;
+  line-height: 2rem;
+  list-style-type: none;
+  border-bottom: 1px solid #ccc;
+}
+h1 {
+  text-shadow: 1px 1px 1px #fff;
+}
+
+h4 {
+  font-weight: 400;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+a {
+  color: #00B7FF;
+}
